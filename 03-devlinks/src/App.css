@@ -10,14 +10,17 @@
 
 #App {
   height: 100vh;
+
   background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
-ul {
+#Link ul {
   list-style: none;
   display: flex;
   flex-direction: column;

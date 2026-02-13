@@ -11,14 +11,16 @@ function App() {
 
       <div className="switch">botão switch</div>
 
-      <ul>
-        <Link url={""}>Inscreva-se</Link>
-        <Link url={""}>Minha playlist</Link>
-        <Link url={""}>Me pague um café!</Link>
-        <Link url={""}>Conheça o Curso DEV</Link>
-      </ul>
+      <div id="Link">
+        <ul>
+          <Link url={""}>Inscreva-se</Link>
+          <Link url={""}>Minha playlist</Link>
+          <Link url={""}>Me pague um café!</Link>
+          <Link url={""}>Conheça o Curso DEV</Link>
+        </ul>
+      </div>
 
-      <div className="socialLinks">
+      <div id="socialLinks">
         <SocialLink url={"https://github.com"} icon={"logo-github"} />
         <SocialLink url={"https://instagram.com"} icon={"logo-instagram"} />
         <SocialLink url={"https://youtube.com"} icon={"logo-youtube"} />

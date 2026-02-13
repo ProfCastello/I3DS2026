@@ -1,0 +1,26 @@
+:root {
+  --bg-url: url(assets/bg-desktop-light.jpg);
+  --text-color: #000;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.4);
+  --switch-bg-url: url(assets/Sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+}
+
+#App {
+  height: 100vh;
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}

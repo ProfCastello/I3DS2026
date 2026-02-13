@@ -11,6 +11,11 @@
 #App {
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
   background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
@@ -20,10 +25,29 @@
   color: var(--text-color);
 }
 
-#Link ul {
-  list-style: none;
+#Link {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
+  justify-content: center;
+  
+  ul {
+    width: 100%;
+
+    max-width: 588px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+#SocialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  & a {
+    color: var(--text-color);
+    font-size: x-large;
+  }
 }

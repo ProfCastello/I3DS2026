@@ -39,7 +39,7 @@
 }
 
 .light #Switch button {
-  animation: slide-in 0.2 forwards;
+  animation: slide-in 0.2s forwards;
 }
 
 /* animação */
@@ -48,7 +48,7 @@
     left: 0;
   }
   to {
-    left: 50%;
+    left: 55%;
   }
 }
 

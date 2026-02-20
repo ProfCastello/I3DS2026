@@ -24,7 +24,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("Hulk");
   }, []);
 
   return (
@@ -40,11 +40,15 @@ const App = () => {
         <img src={lupa} alt="Botão de ação para pesquisa!" />
       </div>
 
-      <div className="container">
-        {movies.map((movie, index) => (
-          <MovieCard key={index} {...movie} />
-        ))}
-      </div>
+      {movies?.length > 0 ? (
+        <div className="container">
+          {movies.map((movie, index) => (
+            <MovieCard key={index} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <h2>😢 Filme não encontrado 😢</h2>
+      )}
 
       <Rodape link={"https://github.com/ProfCastello"}>ProfCastello</Rodape>
     </div>

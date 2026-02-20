@@ -17,7 +17,7 @@ const App = () => {
   //Criando a conexão com a API e trazendo informações
   const searchMovies = async (title) => {
     const response = await fetch(`${apiUrl}&s=${title}`);
-    const data = await response.json;
+    const data = await response.json();
 
     //Alimentando a variavel movies
     setMovies(data.Search);

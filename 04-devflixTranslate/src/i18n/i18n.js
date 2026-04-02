@@ -1,0 +1,92 @@
+export const LANGUAGES = [
+  {
+    code: "pt-BR",
+    flag: "🇧🇷",
+    flagCode: "br",
+    label: "Português (Brasil)",
+    description: "Interface em português brasileiro",
+  },
+  {
+    code: "en-US",
+    flag: "🇺🇸",
+    flagCode: "us",
+    label: "English (United States)",
+    description: "Interface in American English",
+  },
+  {
+    code: "es-ES",
+    flag: "🇪🇸",
+    flagCode: "es",
+    label: "Español (España)",
+    description: "Interfaz en español",
+  },
+];
+
+export const TRANSLATIONS = {
+  "pt-BR": {
+    logoAlt:
+      "Logotipo do serviço de streaming Devflix, com letras vermelhas e fundo preto, promovendo conteúdo de séries, filmes e entretenimento online.",
+    searchPlaceholder: "Pesquise por filmes",
+    searchButtonAlt: "Botão para pesquisar filmes",
+    emptyMovieList: "😢 Filme não encontrado 😢",
+    footerPrefix: "Feito com 🫰🏻 por",
+    languageAria: "Selecionar idioma",
+    language: "Idioma",
+    theme: "Tema",
+    closeModal: "Fechar",
+    watchNow: "Assistir",
+    rating: "Avaliação",
+    duration: "Duração",
+    cast: "Elenco",
+    genre: "Gênero",
+    synopsis: "Sinopse",
+    mediaTypeMovie: "Filme",
+    mediaTypeSeries: "Série",
+    mediaTypeEpisode: "Episódio",
+  },
+  "en-US": {
+    logoAlt:
+      "Devflix streaming service logo with red letters on a black background, promoting series, movies, and online entertainment.",
+    searchPlaceholder: "Search for movies",
+    searchButtonAlt: "Button to search movies",
+    emptyMovieList: "😢 Movie not found 😢",
+    footerPrefix: "Made with 🫰🏻 by",
+    languageAria: "Select language",
+    language: "Language",
+    theme: "Theme",
+    closeModal: "Close",
+    watchNow: "Watch",
+    rating: "Rating",
+    duration: "Runtime",
+    cast: "Cast",
+    genre: "Genre",
+    synopsis: "Synopsis",
+    mediaTypeMovie: "Movie",
+    mediaTypeSeries: "Series",
+    mediaTypeEpisode: "Episode",
+  },
+  "es-ES": {
+    logoAlt:
+      "Logotipo del servicio de streaming Devflix, con letras rojas sobre fondo negro, promoviendo series, películas y entretenimiento en línea.",
+    searchPlaceholder: "Busca películas",
+    searchButtonAlt: "Botón para buscar películas",
+    emptyMovieList: "😢 Película no encontrada 😢",
+    language: "Idioma",
+    theme: "Tema",
+    footerPrefix: "Hecho con 🫰🏻 por",
+    languageAria: "Seleccionar idioma",
+    closeModal: "Cerrar",
+    watchNow: "Ver",
+    rating: "Valoración",
+    duration: "Duración",
+    cast: "Reparto",
+    genre: "Género",
+    synopsis: "Sinopsis",
+    mediaTypeMovie: "Película",
+    mediaTypeSeries: "Serie",
+    mediaTypeEpisode: "Episodio",
+  },
+};
+
+export const THEME_STORAGE_KEY = "devflix-theme";
+export const LANGUAGE_STORAGE_KEY = "devflix-language";

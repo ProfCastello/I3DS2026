@@ -72,3 +72,11 @@ io.on("connection", (socket) => {
 const userName = (username, id) => {
   console.log(`Usuário ${username} conectado com o seguinte id: ${id}`);
 };
+
+// ==================================
+// INICIAR O SERVIDOR
+// ==================================
+server.listen(PORT, () => {
+  console.log(`Servidor está rodando na porta ${PORT}...`);
+  console.log(`Cliente deve conectar em http://seu-ip:${PORT}`);
+});

@@ -35,7 +35,7 @@ io.on("connection", (socket) => {
     // Armazena o nome de usuário no objeto socket para uso posterior
     socket.data.username = username;
     // Registra no console que um usuário conectou
-    username(username, socket.id);
+    userName(username, socket.id);
   });
 
   // ==================================
@@ -49,4 +49,26 @@ io.on("connection", (socket) => {
     // Motivo da desconexão. Motivos comuns: "client namespace disconnect", "client left", etc
     console.log(`Motivo: ${reason}`);
   });
+
+  // ==================================
+  // EVENTO: Servidor recebe mensagem
+  // ==================================
+
+  socket.on("message", (text) => {
+    // Quando um cliente envia uma mensagem, o servidor:
+    // 1. Cria um objeto com dados da mensagem
+    // 2. Envia para TODOS os clientes conectados usando io.emit()
+    // Isso permite que todos vejam a mensagem em tempo real
+    io.emit("receive_message", {
+      text,
+      authorId: socket.id,
+      author: socket.data.username,
+    });
+    console.log(`Usuário ${socket.data.username} enviou uma mensagem!`);
+  });
 });
+
+// Registra no console quando um novo usuário se conecta
+const userName = (username, id) => {
+  console.log(`Usuário ${username} conectado com o seguinte id: ${id}`);
+};

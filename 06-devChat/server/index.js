@@ -17,7 +17,7 @@ const io = require("socket.io")(server, {
   // Exemplo: "http://seu.ip.aqui:5173" para rede
 });
 
-const PORT = 3001; // Porta na qual o servidor irá escutar conexões
+const PORT = 3000; // Porta na qual o servidor irá escutar conexões
 
 // =============================================
 // EVENT LISTENER: Quando um cliente se conecta

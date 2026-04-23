@@ -25,7 +25,7 @@ const PORT = 3000; // Porta na qual o servidor irá escutar conexões
 io.on("connection", (socket) => {
   // "socket" representa a conexão de um único cliente
   // Cada cliente que se conecta recebe um novo objeto "socket"
-  // socket.id: ID único do cliente (gerado automaticamente)
+  // socket.id: ID único do c liente (gerado automaticamente)
   // socket.data: Objeto para armazenar dados do cliente (username, etc)
 
   // ==================================

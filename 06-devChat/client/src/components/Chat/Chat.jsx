@@ -24,7 +24,17 @@ const Chat = (props) => {
     <div>
       <div className={style.chat_container}>
         <div className={style.chat_body}>
-            
+          {messageList.map((message, index) => (
+            <div
+              className={`${style.message_container} ${message.authorId === props.socket.id && style.message_mine}`}
+              key={index}
+            >
+              <div className={style.message_author}>
+                <strong>{message.author}</strong>
+              </div>
+              <div className={style.message_text}>{message.text}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

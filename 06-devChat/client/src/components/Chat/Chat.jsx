@@ -36,6 +36,21 @@ const Chat = (props) => {
             </div>
           ))}
         </div>
+
+        <div className={style.chat_footer}>
+          <Input
+            inputRef={messageRef}
+            placeholder="Mensagem"
+            onKeyDown={(e) => getEnterKey(e)}
+            fullWidth
+          />
+
+          <SendIcon
+            sx={{ m: 1, cursor: "pointer" }}
+            style={{ color: "#129d93" }}
+            onClick={() => handleSubmit()}
+          />
+        </div>
       </div>
     </div>
   );

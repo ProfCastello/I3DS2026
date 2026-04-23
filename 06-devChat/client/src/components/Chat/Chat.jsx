@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from "react";
 const Chat = (props) => {
   const [messageList, setMessageList] = useState([]);
 
+  const bottomRef = useRef();
+
   const messageRef = useRef();
 
   useEffect(() => {
@@ -16,6 +18,8 @@ const Chat = (props) => {
       // usa função callback para garantir que pega o estado mais recente
       setMessageList((current) => [...current, data]);
     });
+
+    messageRef.current.focus();
 
     // Cleanup: remover o listener quando o componente desmonta
     // Evita vazamento de memória e listeners duplicados
@@ -37,6 +41,14 @@ const Chat = (props) => {
     if (e.key === "Enter") handleSubmit();
   };
 
+  useEffect(() => {
+    scrollDown();
+  }, [messageList]);
+
+  const scrollDown = () => {
+    bottomRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       <div className={style.chat_container}>
@@ -52,6 +64,8 @@ const Chat = (props) => {
               <div className={style.message_text}>{message.text}</div>
             </div>
           ))}
+
+          <div ref={bottomRef} />
         </div>
 
         <div className={style.chat_footer}>

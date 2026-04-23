@@ -15,10 +15,19 @@ const Join = () => {
     socket.emit("set_username", username);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
   return (
     <div>
       <h2>Bem-vindo ao devChat</h2>
-      <Input inputRef={usernameRef} placeholder="Nome de usuário" />
+      <Input
+        inputRef={usernameRef}
+        placeholder="Nome de usuário"
+        onKeyDown={handleKeyPress}
+      />
       <Button
         sx={{ mt: 2, mb: 2 }}
         variant="contained"
